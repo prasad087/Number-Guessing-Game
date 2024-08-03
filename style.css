@@ -1,0 +1,153 @@
+* {
+  padding: 0;
+  margin: 0;
+  border-width: 2px;
+  font-family: cursive;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #73b9fa;
+  font-size: 16px; /* Base font size for scaling */
+}
+
+.container {
+  background-color: dimgray;
+  border-radius: 25px;
+  padding: 20px;
+  max-width: 90%;
+  width: 400px; /* Ensure the container doesn’t get too wide */
+}
+
+.head {
+  padding: 20px;
+  border: 2px solid #73b9fa;
+  text-align: center; /* Center-align the header text */
+}
+
+.entry {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.entry input {
+  height: 60px;
+  width: calc(100% - 22px); /* Account for padding and border */
+  max-width: 300px;
+  border: 3px solid #73b9fa;
+  border-radius: 10px;  
+  margin-bottom: 15px; /* Slightly reduced margin */
+  font-size: 1rem;
+  padding: 0 10px; /* Added padding for better text alignment */
+}
+
+#btn {
+  appearance: none;
+  background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, rgba(58, 65, 111, .5) 0 -3px 0 inset;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono", monospace;
+  height: 48px;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  padding: 0 16px;
+  text-align: center;
+  transition: box-shadow .15s, transform .15s;
+  user-select: none;
+  white-space: nowrap;
+  font-size: 1rem;
+}
+
+#btn:focus {
+  box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+}
+
+#btn:hover {
+  box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+#btn:active {
+  box-shadow: #3c4fe0 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+#guesses {
+  font-size: 1rem;
+  border: 3px solid #73b9fa;
+  border-radius: 5px;
+  margin: 0 auto;
+  max-width: 90%;
+  text-align: center; /* Center the text */
+}
+
+.wrng {
+  margin-top: 15px;
+  font-size: 1rem;
+
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+      padding: 15px;
+      width: 90%; /* Reduce the width on smaller screens */
+  }
+
+  .entry input {
+      width: 100%;
+      font-size: 0.9rem;
+  }
+
+  #btn {
+      font-size: 0.9rem;
+      height: 44px; /* Adjust height for smaller screens */
+  }
+
+  #guesses {
+      font-size: 0.9rem;
+  }
+
+  .head {
+      padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+      font-size: 14px; /* Adjust base font size */
+  }
+
+  .container {
+      width: 95%; /* Make the container almost full-width */
+      padding: 10px;
+  }
+
+  .entry input {
+      font-size: 0.8rem;
+      padding: 0 8px; /* Adjust padding for better fit */
+  }
+
+  #btn {
+      font-size: 0.8rem;
+      height: 40px;
+  }
+
+  #guesses {
+      font-size: 0.8rem;
+  }
+
+  .head {
+      padding: 10px;
+  }
+}
